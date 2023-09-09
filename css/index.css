@@ -1,0 +1,139 @@
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url(../font/LeagueSpartan-VariableFont_wght.ttf);
+}
+body{
+    background-image: url(../images/bg-pattern-top-mobile.svg),url(../images/bg-pattern-bottom-mobil.svg);
+    background-position:0 0 ,calc( 100vw - 375px) bottom;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    font-family: LeagueSpartan;
+}
+#main-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin:30px auto;
+    align-items: center;
+}
+#rates{
+    margin: 25px 0;
+}
+.feedback{
+    height: fit-content;
+    padding: 40px;
+    border-radius: 7px;
+    background-color: hsl(300, 43%, 22%);
+    color: white;
+    margin: 5px 0;
+}
+@media(min-width:900px){
+    body{
+        min-height: 98vh;
+        background-image: url(../images/bg-pattern-top-desktop.svg),url(../images/bg-pattern-bottom-desktop.svg);
+        background-position:0 0 ,calc(100vw - 1085px) bottom;
+        background-repeat: no-repeat;
+        align-items: center;
+    }
+    #main-content{
+        max-width: none;
+        gap: 3%;
+        margin: 80px 8%;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+        ' one one one two two two '
+        ' three three four four five five '
+        ;
+    }
+    
+    #description{
+        grid-area: one;
+        width:350px;
+    }
+    #rates{
+        grid-area: two;
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .first{
+        grid-area: three;
+    }
+    .second{
+        margin-top: 40px;
+        grid-area: four;
+    }
+    .third{
+        margin-top: 80px;
+        grid-area: five;
+    }
+
+    #rates div:nth-child(2){
+        margin-left: 10%;
+    }
+    #rates div:nth-child(3){
+        margin-left: 20%;
+    }
+}
+
+#rates div{
+    display: flex;
+    align-items: center;
+    width:300px;
+    padding: 20px 30px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    color:hsl(300, 43%, 22%);
+    background-color:hsl(300, 24%, 96%);
+}    
+h1{
+    font-weight: 700;
+    font-size: 50px;
+    color: hsl(300, 43%, 22%);
+    margin: 0;
+    padding: 0;
+    margin-bottom: 25px;
+}
+h1+p{
+    color :hsl(303, 10%, 53%);
+    line-height: 1.4;
+}
+
+#rates span{
+    display: block;
+    margin-left: 8%;
+    font-weight: bold;
+}
+
+
+.info{
+    display: flex;
+    align-items: center;
+}
+.info img{
+    width: 40px;
+    border-radius: 50%;
+}
+.info div{
+    margin-left: 12px;
+    font-weight: bold;
+}
+.job{
+    color:  hsl(333, 80%, 67%);
+    margin-top: 5px;
+}
+.feedback p{
+    line-height: 1.4;
+}
+footer{
+    font-size: 11px;
+    display: flex;
+    padding: 13px;
+    width: fit-content;
+    margin: auto;
+    height: 20px;
+    align-items: center;
+}
